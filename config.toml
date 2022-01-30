@@ -1,4 +1,4 @@
-baseURL = 'https://fullpwn.github.io'
+baseURL = 'https://fullpwn.github.io/public'
 languageCode = 'en-us'
 title = 'home - fullpwn'
 theme = "hugo-theme-shell"
