@@ -1,4 +1,0 @@
-baseURL = 'https://fullpwn.is-a.dev'
-languageCode = 'en-us'
-title = 'home - fullpwn'
-theme = "hugo-theme-shell"
