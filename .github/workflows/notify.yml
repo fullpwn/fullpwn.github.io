@@ -1,0 +1,29 @@
+        run: |
+          curl -s https://apt.wabarc.eu.org/KEY.gpg | sudo apt-key add -
+          sudo echo "deb https://apt.wabarc.eu.org/ /" > /etc/apt/sources.list.d/wayback.list
+          sudo apt update
+          sudo apt install wayback
+          wayback -h
+name: Archive to archive.org
+
+# Only trigger, when the build workflow succeeded
+on:
+  workflow_run:
+    workflows: ["github pages"]
+    types:
+      - completed
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Install and archive
+        run: |
+          curl -s https://apt.wabarc.eu.org/KEY.gpg | sudo apt-key add -
+          sudo echo "deb https://apt.wabarc.eu.org/ /" > /etc/apt/sources.list.d/wayback.list
+          sudo apt update
+          sudo apt install wayback
+          wayback -h
