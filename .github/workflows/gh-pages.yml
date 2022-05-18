@@ -7,6 +7,14 @@ on:
   pull_request:
 
 jobs:
+  bash-example:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Group of log lines
+        run: |
+            echo "::group::My title"
+            echo "Inside group"
+            echo "::endgroup::"
   deploy:
     runs-on: ubuntu-20.04
     steps:
@@ -30,11 +38,3 @@ jobs:
           sudo apt install wayback
           wayback -h
 
-  bash-example:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Group of log lines
-        run: |
-            echo "::group::My title"
-            echo "Inside group"
-            echo "::endgroup::"
