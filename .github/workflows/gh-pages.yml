@@ -7,14 +7,6 @@ on:
   pull_request:
 
 jobs:
-  bash-example:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Group of log lines
-        run: |
-            echo "::group::My title"
-            echo "Inside group"
-            echo "::endgroup::"
   deploy:
     runs-on: ubuntu-20.04
     steps:
@@ -29,12 +21,11 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-
-      - name: Archive
         run: |
           curl -s https://apt.wabarc.eu.org/KEY.gpg | sudo apt-key add -
           sudo echo "deb https://apt.wabarc.eu.org/ /" > /etc/apt/sources.list.d/wayback.list
           sudo apt update
           sudo apt install wayback
           wayback -h
+
 
