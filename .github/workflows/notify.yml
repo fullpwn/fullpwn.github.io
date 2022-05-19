@@ -1,7 +1,7 @@
 # Only trigger, when the build workflow succeeded
 on:
   workflow_run:
-    workflows: ["pages build and deployment"]
+    workflows: ["github pages"]
     types:
       - completed
 
@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install and archive
-        run: |
+        script: |
           curl -s https://apt.wabarc.eu.org/KEY.gpg | sudo apt-key add -
           sudo echo "deb https://apt.wabarc.eu.org/ /" > /etc/apt/sources.list.d/wayback.list
           sudo apt update
