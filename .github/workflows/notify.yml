@@ -1,7 +1,7 @@
 # Only trigger, when the build workflow succeeded
 on:
   workflow_run:
-    workflows: ["github pages"]
+    workflows: ["Deploy"]
     types:
       - completed
 
