@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Install and archive
-        script: |
+        run: |
           curl -s https://apt.wabarc.eu.org/KEY.gpg | sudo apt-key add -
           sudo echo "deb https://apt.wabarc.eu.org/ /" > /etc/apt/sources.list.d/wayback.list
           sudo apt update
