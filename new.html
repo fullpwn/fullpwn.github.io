@@ -1,0 +1,39 @@
+<html>
+<head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans">
+<title>fullpwn</title>
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<style>
+body {
+  font-family: "Google Sans", sans-serif;
+}
+</style>
+</head>
+<body>
+
+<center><h1 id="greeting"><b></b></h1></center>
+<center><p>Hey! I'm fullpwn. I play around with web development.</p></center>
+<center><p>I work at [[INSERT JOB NAME]</p></center>
+<br>
+<center><h1><b>Contact</b></h1></center>
+<center><p>Twitter: @fullpwn</p></center>
+<center><p>Discord: fullpwn#6315</p></center>
+<center><p>Email: technobytecritter@gmail.com</p></center>
+<br>
+<br>
+<br>
+<center><p>This page will be the new layout once this is complete.</p></center>
+<script>
+    const time = new Date().getHours();
+    let greeting;
+    if (time < 10) {
+      greeting = "Good morning!";
+    } else if (time < 20) {
+      greeting = "G'day!";
+    } else {
+      greeting = "Good evening!";
+    }
+    document.getElementById("greeting").innerHTML = greeting;
+    </script>
+</body>
+</html>
