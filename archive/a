@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>fullpwn</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans">
+  <style>
+    body {
+      font-family: "Google Sans", sans-serif;
+    }
+  </style>
+</head>
+<body>
+  <center><h1><b>Archive</b></h1></center>
+<center><p><a href="https://fullpwn.is-a.dev/archive/22/05/">26 May 2022</a></p></center>
+</body>
+</html>
