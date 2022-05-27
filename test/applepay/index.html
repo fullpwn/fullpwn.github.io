@@ -19,7 +19,7 @@
         </style>
         <apple-pay-button buttonstyle="black" type="plain" locale="en"></apple-pay-button>
         <script>
-            function onApplePayButtonClicked() { 
+function onApplePayButtonClicked() { 
 
 if (!ApplePaySession) {
     return;
@@ -39,7 +39,7 @@ const request = {
         "discover"
     ],
     "total": {
-        "label": "fortnit battl pas",
+        "label": "Demo (Card is not charged)",
         "type": "final",
         "amount": "1.99"
     }
@@ -70,7 +70,26 @@ session.onshippingmethodselected = event => {
 
 session.onshippingcontactselected = event => {
     // Define ApplePayShippingContactUpdate based on the selected shipping contact.
-    const update = {};
+    const update = {
+        "newTotal": {
+            "label": "Demo",
+            "amount": "35.00"
+        },
+        "newLineItems": [
+            {
+                "label": "Subtotal",
+                "amount": "17.75"
+            },
+            {
+                "label": "Sales Tax",
+                "amount": "2.25"
+            },
+            {
+                "label": "Shipping",
+                "amount": "10.00"
+            }
+        ]
+    };
     session.completeShippingContactSelection(update);
 };
 
