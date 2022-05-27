@@ -10,10 +10,33 @@
     body {
       font-family: "Google Sans", sans-serif;
     }
+    .dark-mode {
+  background-color: #181818;
+  color: white;
+    }
   </style>
 </head>
 <body>
 <center><h1><b>Hey!</b></h1></center>
 <center><p>The beta preview has now closed. Thank you for your interest.</p></center>
+<script>
+    function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+
+let matched = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if(matched)
+{
+	console.log('Toggling Night Owl mode.');
+	myFunction()
+}
+
+else
+{
+	console.log('Dark Mode not detected.');
+}
+</script>
 </body>
 </html>
