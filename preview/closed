@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Beta Preview</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans">
+  <style>
+    body {
+      font-family: "Google Sans", sans-serif;
+    }
+  </style>
+</head>
+<body>
+<center><h1><b>Hey!</b></h1></center>
+<center><p>The beta preview has now closed. Thank you for your interest.</p></center>
+</body>
+</html>
