@@ -10,10 +10,37 @@
       body {
         font-family: "Google Sans", sans-serif;
       }
+      .dark-mode {
+  background-color: #181818;
+  color: white;
+    }
+    a {
+  color: #5ca3a0;
+}
+  <
     </style>
 </head>
 <body>
     <meta http-equiv="Refresh" content="1; url='https://fullpwn.is-a.dev/preview/'" />
     <center><h1><b>Please wait.</b></h1></center>
+    <script>
+      function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+
+let matched = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if(matched)
+{
+	console.log('Toggling Night Owl mode.');
+	myFunction()
+}
+
+else
+{
+	console.log('Dark Mode not detected.');
+}
+    </script>
 </body>
 </html>
