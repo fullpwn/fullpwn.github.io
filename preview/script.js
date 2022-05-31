@@ -1,2 +1,1 @@
-var debug;
-console.log("test!")
+debug = console.log("hi")
