@@ -7,6 +7,8 @@ debug = function(arg) {
     desc1.innerHTML = "You have enabled debug mode.";
     const desc2 = document.getElementById("description2");
     desc2.innerHTML = "Refresh to disable.";
+    const title = document.getElementById("title");
+    title.innerHTML = "Debug Mode - fullpwn";
   }
    
 
