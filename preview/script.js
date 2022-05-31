@@ -1,6 +1,6 @@
-var og = console.log;
+var og = admin;
 
-console.log = function(arg) {
-  if (arg == 'super secret debug') alert('welcome to the cool kids club. debug mode enabled.'); document.write("<center><h1>Debug!</h1></center>")
+admin = function(arg) {
+  if (arg == 'goback') alert('O_O h- how did you find this?'); document.write("<center><p><b>no.</b></p></center>")
   og(arg);
 }
