@@ -6,7 +6,7 @@ debug = function(arg) {
     const desc1 = document.getElementById("description1");
     desc1.innerHTML = "You have enabled debug mode.";
     const desc2 = document.getElementById("description2");
-    desc1.innerHTML = "Refresh to disable.";
+    desc2.innerHTML = "Refresh to disable.";
   }
    
 
