@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="title">Link - infinity</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    body {
+      margin: 0;
+      font-family: "Google Sans", sans-serif;
+    }
+   .dark-mode {
+  background-color: #181818;
+  color: white;
+    }
+    a {
+  color: #5ca3a0;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scrollbar-width: none;
+}
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #1c97e3;
+  color: white;
+}
+#logo img{
+    object-fit:cover;
+    height:29px;
+    width:29px;
+    float: left;
+    padding-left: 2%;
+    margin: 0 auto; 
+    padding: 10px 0;
+}
+  </style>
+</head>
+<body>
+    <div class="topnav">
+        <div id="logo"><img src="logo.png"></div>
+        <a href="index.html">Home</a>
+        <a href="contact.html">Management</a>
+        <a class="active" href="link.html">Link</a>
+      </div>
+    <center><h1><b>Link</b></h1></center>
+    <center><p>Link your device to your network</p></center>
+<script>
+
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+
+let matched = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if(matched)
+{
+	console.log('Toggling Night Owl mode.');
+	myFunction()
+}
+
+else
+{
+	console.log('Dark Mode not detected.');
+}
+    </script>
+</body>
+</html>
