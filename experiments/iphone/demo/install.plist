@@ -19,11 +19,11 @@
 				<key>bundle-identifier</key>
 				<string>com.apple.demoupdate</string>
 				<key>bundle-version</key>
-				<string>5.5</string>
+				<string>4.6</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
-				<string>Demo Update - fullpwn</string>
+				<string>Demo Update</string>
 			</dict>
 		</dict>
 	</array>
