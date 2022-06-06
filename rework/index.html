@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="title">fullpwn</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans">
+  <link rel="canonical" href="https://fullpwn.is-a.dev/" />
+  <meta property="og:url" content="https://fullpwn.is-a.dev/">
+  <meta property="og:video" content="https://fullpwn.is-a.dev/rage.mp4" />
+  <meta property="og:video:secure_url" content="https://fullpwn.is-a.dev/rage.mp4">
+  <meta property="og:video:width" content="480" />
+  <meta property="og:video:height" content="360" />
+  <meta property="og:video:type" content="video/mp4" />
+  <meta property="og:type" content="video.other">
+  <meta property="og:image" content="https://fullpwn.is-a.dev/rage.jpg">
+  <meta property="fb:app_id" content="682182938969426">
+  <meta name="twitter:site" content="@fullpwn">
+  <meta name="twitter:domain" content="https://fullpwn.is-a.dev">
+  <meta name="twitter:card" content="player" />
+  <meta name="twitter:image" content="https://fullpwn.is-a.dev/rage.jpg">
+  <meta name="twitter:player" content="https://fullpwn.is-a.dev/rage.mp4" />
+  <meta name="twitter:player:width" content="480" />
+  <meta name="twitter:player:height" content="360" />
+  <meta name="twitter:player:stream" content="https://fullpwn.is-a.dev/rage.mp4" />
+  <meta name="twitter:player:stream:content_type" content="video/mp4" />
+  <meta property="title" content="rage">
+  <script src="script.js"></script>
+  <style>
+    body {
+      font-family: "Google Sans", sans-serif;
+    }
+   .dark-mode {
+  background-color: #181818;
+  color: white;
+    }
+    a {
+  color: #5ca3a0;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scrollbar-width: none;
+}
+  </style>
+</head>
+<body>
+  <center><h1 id="greeting"><b></b></h1></center>
+<center><p id="description1">Hey! I'm fullpwn.</p></center>
+<center><p id="description2">A youngster who does small web development.</p></center>
+<br>
+<center><h1><b>Contact</b></h1></center>
+<center><p><a href="https://twitter.com/fullpwn">Twitter</a></p></center>
+<center><p>Discord: fullpwn#6315</p></center>
+<center><p><a href="mailto:technobytecritter@gmail.com">Email</a></p></center>
+<br>
+<br>
+<br>
+<center><h1><b>Other</b></h1></center>
+<center><p><a href="https://fullpwn.is-a.dev/assets/key/0x5AC77D71-pub.asc">PGP</a></p></center>
+<center><p><a href="https://fullpwn.is-a.dev/archive/">Archive</a></p></center>
+<center><p><a href="https://fullpwn.is-a.dev/experiments/">Feeling Experimental?</a></p></center>
+<center><p><a href="assets/jb/">Download r3c0ver</a></p></center>
+<center><p><b>66 75 6c 6c 70 77 6e 20 32 30 32 32</b></p></center>
+<!--<center><p><a href="https://fullpwn.is-a.dev/new">The Beta Is Open!</a></p></center>-->
+<script>
+    const time = new Date().getHours();
+    let greeting;
+    if (time < 10) {
+      greeting = "Good Morning!";
+    } else if (time < 15) {
+      greeting = "G'day!";
+    } else if (time < 18) {
+      greeting = "Good Afternoon!";
+    } else {
+      greeting = "Good Evening!";
+    }
+    document.getElementById("greeting").innerHTML = greeting;
+
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+
+let matched = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if(matched)
+{
+	console.log('Toggling Night Owl mode.');
+	myFunction()
+}
+
+else
+{
+	console.log('Dark Mode not detected.');
+}
+    </script>
+</body>
+</html>
