@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Screensaver - fullpwn</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans">
+  <style>
+    body {
+      font-family: "Google Sans", sans-serif;
+    }
+    .dark-mode {
+  background-color: #181818;
+  color: white;
+    }
+    a {
+  color: #5ca3a0;
+}
+.center {
+text-align: center;
+}
+  </style>
+</head>
+<body>
+  <div class="center">
+    <h1><b>Demo Update</b></h1>
+    <p>Apple's Screensaver App.</p>
+    <p>This is very difficult to install to a device as you cannot sign it.</p>
+    <br>
+    <p><a href="itms-services://?action=download-manifest&url=https://fullpwn.is-a.dev/experiments/iphone/demo/install.plist">Install</a></p>
+    <p><a href="https://demoupdate.apple.com/install/5.5/demoupdate.ipa">Download IPA</a></p>
+    <br>
+    <br>
+    <h3>Heads Up!</h3>
+    <p>I am not hosting these Applications.</p>
+    <p>You are installing Demo Update from directly from Apple.</p>
+  </div>
+
+<script>
+  function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+
+let matched = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if(matched)
+{
+	console.log('Toggling Night Owl mode.');
+	myFunction()
+}
+
+else
+{
+	console.log('Dark Mode not detected.');
+}
+</script>
+</body>
+</html>

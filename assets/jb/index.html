@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="title">fullpwn</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans">
+  <style>
+    body {
+      font-family: "Google Sans", sans-serif;
+    }
+   .dark-mode {
+  background-color: #181818;
+  color: white;
+    }
+    a {
+  color: #5ca3a0;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scrollbar-width: none;
+}
+
+  </style>
+</head>
+<body>
+  <center><h1><b>r3c0ver</b></h1></center>
+<center><p>The fake jailbreak.</p></center>
+<br>
+<center><p><a href="warning.html">Disclaimer</a></p></center>
+<center><p><a href="no.html">Answer</a></p></center>
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+
+let matched = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if(matched)
+{
+	console.log('Toggling Night Owl mode.');
+	myFunction()
+}
+
+else
+{
+	console.log('Dark Mode not detected.');
+}
+    </script>
+</body>
+</html>
