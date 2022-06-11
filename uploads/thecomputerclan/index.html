@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title id="title">fullpwn</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans">
+  <link rel="canonical" href="https://fullpwn.is-a.dev/" />
+  <meta property="og:url" content="https://fullpwn.is-a.dev/">
+  <meta property="og:video" content="https://fullpwn.is-a.dev/rage.mp4" />
+  <meta property="og:video:secure_url" content="https://fullpwn.is-a.dev/rage.mp4">
+  <meta property="og:video:width" content="480" />
+  <meta property="og:video:height" content="360" />
+  <meta property="og:video:type" content="video/mp4" />
+  <meta property="og:type" content="video.other">
+  <meta property="og:image" content="https://fullpwn.is-a.dev/rage.jpg">
+  <meta property="fb:app_id" content="682182938969426">
+  <meta name="twitter:site" content="@fullpwn">
+  <meta name="twitter:domain" content="https://fullpwn.is-a.dev">
+  <meta name="twitter:card" content="player" />
+  <meta name="twitter:image" content="https://fullpwn.is-a.dev/rage.jpg">
+  <meta name="twitter:player" content="https://fullpwn.is-a.dev/rage.mp4" />
+  <meta name="twitter:player:width" content="480" />
+  <meta name="twitter:player:height" content="360" />
+  <meta name="twitter:player:stream" content="https://fullpwn.is-a.dev/rage.mp4" />
+  <meta name="twitter:player:stream:content_type" content="video/mp4" />
+  <meta property="title" content="rage">
+  <script src="script.js"></script>
+  <style>
+    body {
+      font-family: "Google Sans", sans-serif;
+    }
+   .dark-mode {
+  background-color: #181818;
+  color: white;
+    }
+    a {
+  color: #5ca3a0;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scrollbar-width: none;
+}
+  </style>
+</head>
+<body>
+  <center><h1><b>Stage Manager</b></h1></center>
+<center><p id="description2"><i>Catch the crazy and pass it on.</i></p></center>
+<br>
+<center><h1><b>Download</b></h1></center>
+<center><p><a href="download.zip">Download zip</a></p></center>
+<br>
+<br>
+<br>
+<center><h1><b>View screenshots without downloading</b></h1></center>
+<center><p><a href="1.png">1</a></p></center>
+<center><p><a href="2.png">2</a></p></center>
+<center><p><a href="3.png">3</a></p></center>
+<center><p><a href="4.png">4</a></p></center>
+<center><p><a href="5.png">5</a></p></center>
+<center><p><a href="6.png">6</a></p></center>
+<center><p><a href="7.png">7</a></p></center>
+<center><p><a href="8.png">8</a></p></center>
+<center><p><a href="9.png">9</a></p></center>
+<center><p><a href="10.png">10</a></p></center>
+<center><p><a href="11.png">11</a></p></center>
+<center><p><a href="12.png">12</a></p></center>
+<center><p><a href="13.png">13</a></p></center>
+<center><p><a href="article.jpeg">View article (Low Quality)</a></p></center>
+
+
+
+<script>
+    const time = new Date().getHours();
+    let greeting;
+    if (time < 10) {
+      greeting = "Good Morning!";
+    } else if (time < 15) {
+      greeting = "G'day!";
+    } else if (time < 18) {
+      greeting = "Good Afternoon!";
+    } else {
+      greeting = "Good Evening!";
+    }
+    document.getElementById("greeting").innerHTML = greeting;
+
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+
+let matched = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if(matched)
+{
+	console.log('Toggling Night Owl mode.');
+	myFunction()
+}
+
+else
+{
+	console.log('Dark Mode not detected.');
+}
+    </script>
+</body>
+</html>
