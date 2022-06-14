@@ -17,20 +17,11 @@ p {
   </style>
 </head>
 <body>
-    <script>
-  if (Hls.isSupported()) {
-  var video2 = document.getElementById('abc');
-  var hls = new Hls();
-  hls.loadSource(video2.src);
-  hls.attachMedia(video2);
-  hls.on(Hls.Events.MANIFEST_PARSED, function() {
-    video2.play();
-  });
-}
-    </script>
 <center><h1><b>Stream ABC (Australia)</b></h1></center>
 <center><p>More ABC channels coming soon. Heres ABC NEWS.</p></center>
 
-<center><video class="afterglow" id="abc" width="400" height="225" src="https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/6e1cc6d25ec0480ea099a5399d73bc4b/index.m3u8"></video></center>
+<video controls>
+    <source src="https://abc-iview-mediapackagestreams-2.akamaized.net/out/v1/6e1cc6d25ec0480ea099a5399d73bc4b/index.m3u8" type="application/x-mpegURL">
+</video>
 </body>
 </html>
