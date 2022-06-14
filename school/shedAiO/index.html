@@ -9,6 +9,21 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
   <style>
+
+.column {
+  width: 17%;
+  padding: 5px;
+  margin-left: auto;
+  margin-right: auto;
+
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
     body {
       margin: 0;
       font-family: "Google Sans", sans-serif;
@@ -69,8 +84,15 @@ html {
         <a href="contact.html">Contact</a>
         <a href="about.html">About</a>
       </div>
-    <center><h1><b>Welcome!</b></h1></center>
+    <center><h1><b>Hey!</b></h1></center>
     <center><p>shedAiO is an affordible portible home packed with furniture and other nessecities to make you feel at home.</p></center>
+    <center><h2><b>Images</b></h2></center>
+    <div class="row">
+      <div class="column">
+        <img src="temp.png" alt="Snow" style="width:100%">
+        <img src="temp.png" alt="Snow" style="width:100%">
+      </div>
+    </div>
 <script>
 
 function myFunction() {
