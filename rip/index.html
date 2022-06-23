@@ -22,7 +22,6 @@
         
 
         function yes() {
-            var t=setInterval(yes,1000);
             random = function(length) {
 	        var array = new Uint16Array(length);
 	        window.crypto.getRandomValues(array);
@@ -32,7 +31,7 @@
 	        };
 	        return str;
             }
-        document.title = yes(5)
+        console.log(yes(5));
         }
     </script>
 </body>
