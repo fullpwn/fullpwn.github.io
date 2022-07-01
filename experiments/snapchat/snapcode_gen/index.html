@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Google Translate TTS - fullpwn</title>
+  <title>Snapchat Snapcode Generator - fullpwn</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <style>
@@ -55,8 +55,8 @@ html {
   </style>
 </head>
 <body>
-<center><h1><b>Google Translate TTS</b></h1></center>
-<center><p>Insert text into the field below to generate TTS!</p></center>
+<center><h1><b>Snapchat Snapcode Generator</b></h1></center>
+<center><p>Insert username into the text field below to generate a Snapcode</p></center>
 <br>
 <center><input id="gen" type="text">
 <a id="link" href="#" target="_blank">Generate</a>
@@ -86,7 +86,7 @@ $("input#gen").on("change", function(){
   var gen = $("input#gen").val();
   gen = gen.replace(/\s+/g, "-");
   
-  $("a#link").attr("href", "https://translate.google.com/translate_tts?ie=UTF-8&tl=en-US&client=tw-ob&q=" + gen);
+  $("a#link").attr("href", "https://feelinsonice.appspot.com/web/deeplink/snapcode?username=" + gen + "&type=SVG");
   
 });
 </script>
