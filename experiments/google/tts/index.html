@@ -59,7 +59,7 @@ html {
 <center><p>Insert text into the field below to generate TTS!</p></center>
 <br>
 <center><input id="gen" type="text">
-<a id="link" href="#">Generate</a>
+<a id="link" href="#" target="_blank">Generate</a>
 </center>
 
 
@@ -89,6 +89,10 @@ $("input#gen").on("change", function(){
   $("a#link").attr("href", "https://translate.google.com/translate_tts?ie=UTF-8&tl=en-US&client=tw-ob&q=" + gen);
   
 });
+
+function myFunction() {
+  window.open("https://www.w3schools.com");
+}
 </script>
 </body>
 </html>
