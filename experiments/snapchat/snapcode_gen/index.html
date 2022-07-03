@@ -57,6 +57,7 @@ html {
 <body>
 <center><h1><b>Snapchat Snapcode Generator</b></h1></center>
 <center><p>Insert username into the text field below to generate a Snapcode</p></center>
+<center><p>Double tap the Enter key to confirm</p></center>
 <br>
 <center><input id="gen" type="text">
 <a id="link" href="#" target="_self">Generate</a>
@@ -91,6 +92,22 @@ $("input#gen").on("change", function(){
   
 });
 
+$("input#gen").on('keyup', function (e) {
+    if (e.key === 'Enter' || e.keyCode === 13) {
+      var gen = $("input#gen").val();
+      gen = gen.replace(/\s+/g, "-");
+  
+      $("a#link").attr("href", "https://app.snapchat.com/web/deeplink/snapcode?username=" + gen + "&type=SVG");
+    }
+});
+
+var input = document.getElementById("gen");
+input.addEventListener("keypress", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault();
+    document.getElementById("link").click();
+  }
+});
 </script>
 </body>
 </html>
