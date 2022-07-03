@@ -59,7 +59,8 @@ html {
 <center><p>Insert username into the text field below to generate a Snapcode</p></center>
 <br>
 <center><input id="gen" type="text">
-<a id="link" href="#" target="_blank">Generate</a>
+<a id="link" href="#" target="_self">Generate</a>
+
 </center>
 
 
@@ -89,6 +90,7 @@ $("input#gen").on("change", function(){
   $("a#link").attr("href", "https://app.snapchat.com/web/deeplink/snapcode?username=" + gen + "&type=SVG");
   
 });
+
 </script>
 </body>
 </html>
