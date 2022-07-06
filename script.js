@@ -1,18 +1,18 @@
-debug = function(arg) {
-  if (arg == 'toggle'){
-    console.log("Toggled Debug Mode.")
+cookies = function(arg) {
+  if (arg == 'are cool'){
+    console.log("")
     const header = document.getElementById("greeting");
-    header.innerHTML = "Debug Mode";
+    header.innerHTML = "cookies are cool";
     const desc1 = document.getElementById("description1");
-    desc1.innerHTML = "You have enabled debug mode.";
+    desc1.innerHTML = "You found my easter egg lmfao";
     const desc2 = document.getElementById("description2");
-    desc2.innerHTML = "Refresh to disable.";
+    desc2.innerHTML = "have a cookie";
     const title = document.getElementById("title");
-    title.innerHTML = "Debug Mode - fullpwn";
+    title.innerHTML = "cookies are cool - fullpwn";
   }
    
 
     else{
-
+      console.log('hm?')
     }
 }
