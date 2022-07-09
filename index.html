@@ -125,7 +125,7 @@ html {
 
                 if(!ad || ad.innerHTML.length == 0 
 				|| ad.clientHeight === 0) {
-          document.getElementById("banner_ad").innerHTML = "Adblocker detected. Read more at https://fullpwn.is-a.dev/ads/";
+          ad.innerHTML = "Adblocker detected. Read more at https://fullpwn.is-a.dev/ads/";
                 } else {
                 }
             }, 2000);
