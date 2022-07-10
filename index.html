@@ -125,9 +125,9 @@ html {
 
                 if(!ad || ad.innerHTML.length == 0 
 				|| ad.clientHeight === 0) {
-          
+                 ad.innerHTML = "Heads up! We now use analytics. To learn more, goto https://fullpwn.is-a.dev/ads/";
                 } else {
-                  ad.innerHTML = "Adblocker detected. To learn more, goto https://fullpwn.is-a.dev/ads/";
+                 console.log('No analytics were sent.')
                 }
             }, 2000);
         }
