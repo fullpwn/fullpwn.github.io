@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tracking FAQ - fullpwn</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <style>
+    body {
+      font-family: "Google Sans", sans-serif;
+    }
+   .dark-mode {
+  background-color: #181818;
+  color: white;
+    }
+    a {
+  background:
+    linear-gradient(
+      to right,
+      rgba(92, 163, 160, 1),
+      rgba(92, 163, 160, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+  );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+  
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+a:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scrollbar-width: none;
+}
+  </style>
+</head>
+<body>
+<center><h1><b>Tracking FAQ</b></h1></center>
+<br>
+<center><h2>I got a popup saying you now use analytics, what does this mean?</h2></center>
+<center><p>Analytics are used to monitor what pages you visit while on this domain.</p></center>
+<center><p>This gives me the creator, feedback to know what people want without having to fill out a form.</p></center>
+<br>
+<center><h2>How do I disable tracking?</h2></center>
+<center><p>You can use an Adblock of any kind.</p></center>
+<center><p>Recommended being uBlock Origin</p></center>
+<br>
+<center><h2>What gets sent?</h2></center>
+<center><p>Pages you visited on this domain are sent for analytic purposes.</p></center>
+<center><p><b>No location data is sent.</b></p></center>
+<script>
+  function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+
+let matched = window.matchMedia('(prefers-color-scheme: dark)').matches;
+
+if(matched)
+{
+	console.log('Toggling Night Owl mode.');
+	myFunction()
+}
+
+else
+{
+	console.log('Dark Mode not detected.');
+}
+</script>
+</body>
+</html>
