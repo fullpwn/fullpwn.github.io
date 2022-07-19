@@ -1,0 +1,1 @@
+javascript:(function() {    var link = document.querySelector("link[rel*='icon']") || document.createElement('link');    link.type = 'image/x-icon';    link.rel = 'shortcut icon';    link.href = 'https://www.google.com/images/branding/googleg/1x/googleg_standard_color_128dp.png';    document.title='Google';})();
