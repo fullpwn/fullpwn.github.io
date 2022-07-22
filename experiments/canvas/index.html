@@ -28,6 +28,11 @@ document.addEventListener('mousemove', draw);
 document.addEventListener('mousedown', setPosition);
 document.addEventListener('mouseenter', setPosition);
 
+
+document.addEventListener('touchstart', draw);
+document.addEventListener('touchmove', setPosition);
+document.addEventListener('touchend', setPosition);
+
 // new position from mouse event
 function setPosition(e) {
   pos.x = e.clientX;
