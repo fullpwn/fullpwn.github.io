@@ -27,6 +27,18 @@
   href="launch.png"
 />
   <script src="script.js"></script>
+  <script type="text/javascript"> 
+    function clock(){
+    var refresh=1000; // Refresh rate in milli seconds
+    mytime=setTimeout('display_clock()',refresh)
+    }
+    
+    function display_clock() {
+    var x = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+    document.getElementById('time').innerHTML = "It is ", x;
+    clock();
+     }
+    </script>
   <style>
     body {
       font-family: "Google Sans", sans-serif;
@@ -79,6 +91,7 @@ html {
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
   <center><h1 id="greeting"><b></b></h1></center>
+  <span id='time'></span>
 <center><p id="description1">Hey! I'm fullpwn.</p></center>
 <center><p id="description2">A youngster who does small web development.</p></center>
 <br>
