@@ -8,7 +8,6 @@ body {
 .bar-wrapper {
     height: 300px;
     position: relative;
-    border-radius: 5px;
 }
 .bar {
     position: relative;
@@ -19,6 +18,9 @@ body {
     height: 5px;
     border-bottom: 3px solid #fff;
     
+}
+.canvas{
+    border-radius: 5px;
 }
 button{
   background-color: #454545;
