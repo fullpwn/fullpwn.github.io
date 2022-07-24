@@ -19,9 +19,6 @@ body {
     border-bottom: 3px solid #fff;
     
 }
-canvas{
-    border-radius: 5px;
-}
 button{
   background-color: #454545;
   color: #fff;
