@@ -17,6 +17,7 @@ body {
     border: 1px solid red;
     height: 5px;
     border-bottom: 3px solid #fff;
+    border-radius: 5px;
 }
 button{
   background-color: #454545;
