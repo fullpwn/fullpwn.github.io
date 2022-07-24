@@ -7,8 +7,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ERN-JON Visualizer - fullpwn</title>
+    <script type="text/javascript"> 
+        function clock(){
+        var refresh=1000; // Refresh rate in milli seconds
+        mytime=setTimeout('display_clock()',refresh)
+        }
+        
+        function display_clock() {
+        var x = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        document.getElementById('time').innerHTML = x;
+        clock();
+         }
+        </script>
 </head>
-<body>
+<body onload=display_clock();>
     <h1>ERN-JON</h1>
     <canvas id='canvas' width="800" height="350"></canvas>
     <br>
@@ -20,5 +32,6 @@ id="audio">
   <button onclick="audio.play(); vis();">Play</button>
 
     <script src="main.js"></script>
+    <span id='time'></span>
 </body>
 </html>
