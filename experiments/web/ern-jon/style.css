@@ -23,3 +23,9 @@ button{
   background-color: #454545;
   color: #fff;
 }
+body::-webkit-scrollbar {
+    display: none;
+  }
+  html {
+    scrollbar-width: none;
+  }

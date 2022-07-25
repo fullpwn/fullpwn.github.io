@@ -18,14 +18,36 @@
         document.getElementById('time').innerHTML = x;
         clock();
          }
+         function dmy(){
+        var refresh=1000; // Refresh rate in milli seconds
+        mytime=setTimeout('display_date()',refresh)
+        }
+
+         function display_date(){
+            var d = new Date();
+     
+             var date = d.getDate();
+            var month = d.getMonth() + 1;
+            var year = d.getFullYear();
+      
+            var dateStr = date + "/" + month + "/" + year;
+            document.getElementById('dmy').innerHTML = dateStr;
+            dmy();
+         }
+         function dmytime(){
+            display_date();
+            display_clock();
+         }
+
         </script>
 </head>
-<body onload=display_clock();>
+<body onload=dmytime();>
     <h1 id="label">ERN-JON</h1>
     <canvas id='canvas' width="800" height="350"></canvas>
     <br>
     <br>
-    <h4><span id='time'>00:00</span></h4>
+    <h2><span id='time'>00:00</span></h2>
+    <h4><span id='dmy'>1/1/1970</span></h4>
     <br>
     <br>
 <audio crossOrigin="anonymous"
