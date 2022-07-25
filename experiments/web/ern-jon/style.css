@@ -3,8 +3,6 @@ body {
     background: #000;
     text-align: center;
     color: #fff;
-}
-.label{
     font-family: "Google Sans", sans-serif;
 }
 .bar-wrapper {
@@ -26,10 +24,5 @@ button{
   color: #fff;
 }
 .time{
-    font-family: 'alarm clock';
-    src: url('alarmclock.woff2') format('woff2'),
-        url('alarmclock.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+    font-family: 'Orbitron', sans-serif;
 }
