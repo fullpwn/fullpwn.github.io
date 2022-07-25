@@ -25,4 +25,9 @@ button{
 }
 .time{
     font-family: 'alarm clock';
+    src: url('alarmclock.woff2') format('woff2'),
+        url('alarmclock.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
