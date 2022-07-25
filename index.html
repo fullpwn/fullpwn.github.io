@@ -33,7 +33,7 @@
     mytime=setTimeout('beta_display_clock()',refresh)
     }
     
-    function beta_display_clock() {
+    function display_beta_clock() {
     var x = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     document.getElementById('time').innerHTML = "The time is " + x;
     beta_clock();
