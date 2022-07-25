@@ -28,15 +28,15 @@
 />
   <script src="script.js"></script>
   <script type="text/javascript"> 
-    function clock(){
+    function beta_clock(){
     var refresh=1000; // Refresh rate in milli seconds
-    mytime=setTimeout('display_clock()',refresh)
+    mytime=setTimeout('beta_display_clock()',refresh)
     }
     
-    function display_clock() {
+    function beta_display_clock() {
     var x = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
     document.getElementById('time').innerHTML = "The time is " + x;
-    clock();
+    beta_clock();
      }
     </script>
   <style>
@@ -85,7 +85,7 @@ html {
 }
   </style>
 </head>
-<body onload=display_clock();>
+<body>
   <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZCPTK5"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
