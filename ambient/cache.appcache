@@ -1,0 +1,11 @@
+CACHE MANIFEST
+# 2022-06-26:v1
+
+# Explicitly cached 'master entries'.
+CACHE:
+/favicon.ico
+index.html
+
+FALLBACK:
+offline.html
+
