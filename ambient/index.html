@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ambient.</title>
+    <style>
+body {
+    background: #000;
+    text-align: center;
+    color: #fff;
+    font-family: "Google Sans", sans-serif;
+}
+body::-webkit-scrollbar {
+    display: none;
+  }
+  html {
+    scrollbar-width: none;
+  }
+  .clock {
+    -webkit-touch-callout: none; /* iOS Safari */
+      -webkit-user-select: none; /* Safari */
+       -khtml-user-select: none; /* Konqueror HTML */
+         -moz-user-select: none; /* Old versions of Firefox */
+          -ms-user-select: none; /* Internet Explorer/Edge */
+              user-select: none; /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+}
+  
+    </style>
+</head>
+<body onload=dmytime();>
+    <div class="container">
+        <h1><span id='time' class="clock">00:00</span></h1>
+        <h3><span id='dmy' class="clock">1/1/1970</span></h3>
+    </div>
+    <script>
+function clock(){
+        var refresh=1000; // Refresh rate in milli seconds
+        mytime=setTimeout('display_clock()',refresh)
+        }
+        
+        function display_clock() {
+        var x = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        document.getElementById('time').innerHTML = x;
+        clock();
+         }
+         function dmy(){
+        var refresh=1000; // Refresh rate in milli seconds
+        mytime=setTimeout('display_date()',refresh)
+        }
+
+         function display_date(){
+            var d = new Date();
+     
+             var date = d.getDate();
+            var month = d.getMonth() + 1;
+            var year = d.getFullYear();
+      
+            var dateStr = date + "/" + month + "/" + year;
+            document.getElementById('dmy').innerHTML = dateStr;
+            dmy();
+         }
+         function dmytime(){
+            display_date();
+            display_clock();
+         }
+
+    </script>
+</body>
+</html>
