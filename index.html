@@ -163,6 +163,11 @@ else
 {
 	console.log('Dark Mode not detected.');
 }
+
+if (window.location.toString().includes("https://fullpwn.is-a.dev/")) {
+  alert("NOTICE! fullpwn.is-a.dev has moved to fullpwn.net. You will now be redirected.");
+  location.replace("https://fullpwn.net/");
+}
     </script>
 </body>
 </html>
