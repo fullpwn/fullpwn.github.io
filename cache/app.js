@@ -7,12 +7,13 @@ window.addEventListener("DOMContentLoaded", async event => {
   
   async function cacheMultipleFiles() {
     const cacheName = document.querySelector("#cacheName").value;
+    showResult("Downloading files to" + cacheName);
     if ('caches' in window) {
       try {
         const cache = await caches.open(cacheName);
         const urlsToCache = ["./", "/ambient/", "/ambient/index.html",
                             "https://cdn.glitch.me/606fe2ae-f386-47d3-9892-c6d18ca17998%2F9b775a52-d700-4208-84e9-18578ee75266_icon.jpeg?v=1637764108088",
-                            "https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"]
+                            "https://stsci-opo.org/STScI-01G8GWSTBBCT5A41RAPE3KA6X7.tif"]
         await cache.addAll(urlsToCache);
         showResult(urlsToCache.length + " files were cached on " + cacheName);
         
