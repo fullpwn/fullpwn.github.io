@@ -22,6 +22,7 @@ body {
 button{
   background-color: #454545;
   color: #fff;
+  border-radius: 6px;
 }
 body::-webkit-scrollbar {
     display: none;
