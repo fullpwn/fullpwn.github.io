@@ -252,7 +252,7 @@ input {
 
                 function clearMessages() {
                     message.innerHTML = "";
-                    addMessage("You cleared logs.");
+                    addMessage("Note: You cleared logs.");
                     console.clear();
                 }
 
@@ -272,7 +272,8 @@ input {
                         console.log("Sent: " + msg)
                         addMessage("<span class=\"selfMsg\">You: </span>" + msg);
                     } else {
-                        console.log('Connection is closed');
+                        console.log('Note: Connection is closed');
+                        addMessage("Note: Connection is closed");
                     }
                 });
 
