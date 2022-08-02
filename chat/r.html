@@ -5,30 +5,83 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width">
-        <title>Peer-to-Peer Cue System --- Reciever</title>
-        <link rel="stylesheet" href="style.css">
+        <title>P2P Chat Receiver - fullpwn</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans">
+        <style>
+               body {
+      font-family: "Google Sans", sans-serif;
+    }
+   .dark-mode {
+  background-color: #181818;
+  color: white;
+    }
+    a {
+  background:
+    linear-gradient(
+      to right,
+      rgba(92, 163, 160, 1),
+      rgba(92, 163, 160, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+  );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+  
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+a:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scrollbar-width: none;
+}
+button {
+ border-radius: 6px;
+ border-style: solid;
+ background-color: lightblue;
+ border: none;
+}
+input {
+ border-radius: 4px;
+ border-style: solid;
+}
+        </style>
     </head>
     <body>
-        <table class="display">
-            <tr>
-                <td class="title">Status:</td>
-                <td class="title">Messages:</td>
-            </tr>
+        <center><table class="display">
+            <td><div id="status" class="status">Connecting..</div></td>
             <tr>
                 <td>
-                    <div id="receiver-id" style="font-weight: bold;" title="Copy this ID to the input on send.html.">Generating</div>
+                    <div id="receiver-id" style="font-weight: bold;" title="Copy this ID to the input on send.html.">Please Wait.</div>
                 </td>
+                <br>
                 <td>
                     <input type="text" id="sendMessageBox" placeholder="Enter a message..." autofocus="true" />
                     <button type="button" id="sendButton">Send</button>
-                    <button type="button" id="clearMsgsButton">Clear Msgs (Local)</button>
+                    <button type="button" id="clearMsgsButton">Clear Logs</button>
                 </td>
             </tr>
             <tr>
-                <td><div id="status" class="status">Connecting..</div></td>
+                
                 <td><div class="message" id="message"></div></td>
             </tr>
-        </table>
+        </table></center>
 
         <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
         <script type="text/javascript">
@@ -135,7 +188,7 @@
                                 addMessage(cueString + data);
                                 break;
                             default:
-                                addMessage("<span class=\"peerMsg\">Peer: </span>" + data);
+                                addMessage("<span class=\"peerMsg\">Recipient: </span>" + data);
                                 break;
                         };
                     });
@@ -199,7 +252,8 @@
 
                 function clearMessages() {
                     message.innerHTML = "";
-                    addMessage("Msgs cleared");
+                    addMessage("You cleared logs.");
+                    console.clear();
                 }
 
                 // Listen for enter in message box
@@ -216,7 +270,7 @@
                         sendMessageBox.value = "";
                         conn.send(msg);
                         console.log("Sent: " + msg)
-                        addMessage("<span class=\"selfMsg\">Self: </span>" + msg);
+                        addMessage("<span class=\"selfMsg\">You: </span>" + msg);
                     } else {
                         console.log('Connection is closed');
                     }
