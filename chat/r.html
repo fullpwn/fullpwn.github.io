@@ -16,7 +16,7 @@
             </tr>
             <tr>
                 <td>
-                    <div id="receiver-id" style="font-weight: bold;" title="Copy this ID to the input on send.html.">Connecting</div>
+                    <div id="receiver-id" style="font-weight: bold;" title="Copy this ID to the input on send.html.">Generating</div>
                 </td>
                 <td>
                     <input type="text" id="sendMessageBox" placeholder="Enter a message..." autofocus="true" />
@@ -25,7 +25,7 @@
                 </td>
             </tr>
             <tr>
-                <td><div id="status" class="status"></div></td>
+                <td><div id="status" class="status">Connecting..</div></td>
                 <td><div class="message" id="message"></div></td>
             </tr>
         </table>
@@ -72,7 +72,7 @@
 
                         console.log('ID: ' + peer.id);
                         recvId.innerHTML = "ID: " + peer.id;
-                        status.innerHTML = "Awaiting connection...";
+                        status.innerHTML = "Ready";
                     });
                     peer.on('connection', function (c) {
                         // Allow only a single connection
