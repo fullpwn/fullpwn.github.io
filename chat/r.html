@@ -1,6 +1,7 @@
 
 
 
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -8,6 +9,7 @@
         <meta name="viewport" content="width=device-width">
         <title>P2P Chat Receiver - fullpwn</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans">
+        
         <style>
                body {
       font-family: "Google Sans", sans-serif;
@@ -62,6 +64,9 @@ input {
  border-radius: 4px;
  border-style: solid;
 }
+.message{
+    background: #ffffff50"
+}
         </style>
     </head>
     <body>
@@ -76,6 +81,7 @@ input {
                     <input type="text" id="sendMessageBox" placeholder="Enter a message..." autofocus="true" />
                     <button type="button" id="sendButton">Send</button>
                     <button type="button" id="clearMsgsButton">Clear Logs</button>
+                    <button type="button" id="screenshotMsgsButton">Screenshot</button>
                 </td>
             </tr>
             <tr>
@@ -83,8 +89,11 @@ input {
                 <td><div class="message" id="message"></div></td>
             </tr>
         </table></center>
-
+        <center><h1 id="screenshot_title"></h1></center>
+        <div id="canvasImg"></div>
         <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+        <script src="https://html2canvas.hertzen.com/dist/html2canvas.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script type="text/javascript">
             (function () {
 
@@ -102,6 +111,8 @@ input {
                 var sendMessageBox = document.getElementById("sendMessageBox");
                 var sendButton = document.getElementById("sendButton");
                 var clearMsgsButton = document.getElementById("clearMsgsButton");
+                var screenshotMsgsButton = document.getElementById("screenshotMsgsButton");
+                var screenshot_title = document.getElementById("screenshot_title");
 
                 /**
                  * Create the Peer object for our end of the connection.
@@ -256,8 +267,17 @@ input {
 
                 function clearMessages() {
                     message.innerHTML = "";
-                    addMessage("Note: You cleared logs.");
+                    conn.send("[Client] Recipient cleared chat logs.");
                     console.clear();
+                }
+
+                function screenshot() {
+                    screenshot_title.innerHTML = "Screenshot"
+                    html2canvas(document.querySelector("#message")).then(canvas => {
+                        document.body.appendChild(canvas)
+                    });
+                    conn.send("[Client] Recipient took a screenshot!");
+                    addMessage("[Client] You took a screenshot!")
                 }
 
                 // Listen for enter in message box
@@ -283,6 +303,7 @@ input {
 
                 // Clear messages box
                 clearMsgsButton.addEventListener('click', clearMessages);
+                screenshotMsgsButton.addEventListener('click', screenshot);
 
                 initialize();
             })();
