@@ -40,10 +40,14 @@
             display_date();
             display_clock();
          }
+         
+        function buttonclicked() {
+        var vart = document.getElementById('button_play').style.display = 'none'; 
+    }
 
         </script>
 </head>
-<body onload=dmytime();>
+<body>
     <h2><span id='time' class="clock">00:00</span></h2>
     <h4><span id='dmy' class="clock">1/1/1970</span></h4>
     <br>
@@ -52,6 +56,6 @@
 src="https://icecast.gwes-eas.network:8443/ERN-JON" 
 id="audio">
 </audio>
-  <button onclick="audio.play();">Play</button>
+  <button onclick="buttonclicked(); audio.play(); dmytime();" id="button_play">Start</button>
 </body>
 </html>
