@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-title" content="Audio Clock">
+    <title>ERN-JON Clock - fullpwn</title>
+    <script type="text/javascript"> 
+        function clock(){
+        var refresh=1000; // Refresh rate in milli seconds
+        mytime=setTimeout('display_clock()',refresh)
+        }
+        
+        function display_clock() {
+        var x = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+        document.getElementById('time').innerHTML = x;
+        clock();
+         }
+         function dmy(){
+        var refresh=1000; // Refresh rate in milli seconds
+        mytime=setTimeout('display_date()',refresh)
+        }
+
+         function display_date(){
+            var d = new Date();
+     
+             var date = d.getDate();
+            var month = d.getMonth() + 1;
+            var year = d.getFullYear();
+      
+            var dateStr = date + "/" + month + "/" + year;
+            document.getElementById('dmy').innerHTML = dateStr;
+            dmy();
+         }
+         function dmytime(){
+            display_date();
+            display_clock();
+         }
+
+        </script>
+</head>
+<body onload=dmytime();>
+    <h2><span id='time' class="clock">00:00</span></h2>
+    <h4><span id='dmy' class="clock">1/1/1970</span></h4>
+    <br>
+    <br>
+<audio crossOrigin="anonymous"
+src="https://icecast.gwes-eas.network:8443/ERN-JON" 
+id="audio">
+</audio>
+  <button onclick="audio.play(); vis();">Play</button>
+</body>
+</html>
