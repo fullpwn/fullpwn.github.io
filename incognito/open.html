@@ -1,18 +1,85 @@
-<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<script>
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-NZCPTK5');</script>
+  <!-- End Google Tag Manager -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <title>incognito.</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <style>
+    body {
+      font-family: "Google Sans", sans-serif;
+    }
+    a {
+  background:
+    linear-gradient(
+      to right,
+      rgba(92, 163, 160, 1),
+      rgba(92, 163, 160, 1)
+    ),
+    linear-gradient(
+      to right,
+      rgba(255, 0, 0, 1),
+      rgba(255, 0, 180, 1),
+      rgba(0, 100, 200, 1)
+  );
+  background-size: 100% 3px, 0 3px;
+  background-position: 100% 100%, 0 100%;
+  background-repeat: no-repeat;
+  transition: background-size 400ms;
+  
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+
+a:hover {
+  background-size: 0 3px, 100% 3px;
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scrollbar-width: none;
+  background-color: #181818;
+  color: white;
+}
+input {
+border-radius: 5px;
+border: none;
+}
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NZCPTK5"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <center><h1>Welcome to incognito. lite!</h1></center>
+  <center><h2>Some pages do not work, so if it shows "refused to connect",  it won't work. There isnt a patch for that at the moment.</h2></center>
+  <br>
+<center>URL: <input type="text" id="text" />
+<input type="button" id="btn" value="Submit" onclick="openurl()"/>
+    v0.2
+    </center>
+    <script>
 function openurl() {
-  var url = "https://" + document.getElementById("text").value;
+  var url = document.getElementById("text").value;
     location.replace(url);
 }
 </script>
-</head>
-<body>
-  <h1>Welcome to incognito. lite!</h1>
-  <h2>Some pages do not work, so if it shows "refused to connect",  it won't work. There isnt a patch for that at the moment.
-URL: <input type="text" id="text" />
-<input type="button" id="btn" value="Submit" onclick="openurl()"/>
-    v 0.1
 </body>
 </html>
+
