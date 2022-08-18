@@ -1,0 +1,18 @@
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+$("#btn").click( function() {
+    var url = "https://" + $("#text").val();
+    location.replace(url);
+});
+</script>
+</head>
+<body>
+URL: <input type="text" id="text" />
+<input type="button" id="btn" value="Submit" />
+</body>
+</html>
