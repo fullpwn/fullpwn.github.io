@@ -69,5 +69,16 @@ html {
 <center><p>Install is simple. Drag incognito to your bookmarks bar.</p></center>
 <br>
 <center><a href="javascript:(function () {var s = document.createElement('script');s.setAttribute('src', 'https://www.fullpwn.net/incognito/incognito.js');document.body.appendChild(s);}());">incognito.</a></center>
+  <center><h3><b>incognito.</b></h3></center>
+  <center><a onclick="incognitolite()">Open incognito. lite</a></center>
+  <script>
+function incognitolite() {
+  const myWindow = window.open();
+  myWindow.document.open();
+  myWindow.document.write("<title>New Tab</title>");
+  myWindow.document.write("<iframe src='https://fullpwn.net/incognito/open' style='position:fixed; top:0; left:0; bottom:0; right:0; width:100%; height:100%; border:none; margin:0; padding:0; overflow:hidden; z-index:999999;'>");
+  myWindow.document.close();
+}
+</script>
 </body>
 </html>
