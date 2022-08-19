@@ -39,22 +39,25 @@
             display_clock();
          }
 
+        function buttonclicked() {
+        var vart = document.getElementById('button_play').style.display = 'none'; 
+    }
         </script>
 </head>
-<body onload=dmytime();>
+<body>
     <h1 id="label">ERN-JON</h1>
     <canvas id='canvas' width="800" height="350"></canvas>
     <br>
     <br>
-    <h2><span id='time' class="clock">00:00</span></h2>
-    <h4><span id='dmy' class="clock">1/1/1970</span></h4>
+    <h2><span id='time' class="clock">Not Playing.</span></h2>
+    <h4><span id='dmy' class="clock">fullpwn.net</span></h4>
     <br>
     <br>
 <audio crossOrigin="anonymous"
 src="https://icecast.gwes-eas.network:8443/ERN-JON" 
 id="audio">
 </audio>
-  <button onclick="audio.play(); vis();">Play</button>
+  <button onclick="buttonclicked(); audio.play(); dmytime(); vis();" id="button_play">Play</button>
 
     <script src="main.js"></script>
 </body>
