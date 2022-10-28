@@ -96,10 +96,6 @@
           log.innerHTML = 'Error: ' + positionError.message + '<br />' + log.innerHTML;
        }
 
-       document.getElementById('button-get-position').addEventListener('click', function() {
-          navigator.geolocation.getCurrentPosition(success, error, positionOptions);
-       });
-
        document.getElementById('button-watch-position').addEventListener('click', function() {
           watchId = navigator.geolocation.watchPosition(success, error, positionOptions);
        });
