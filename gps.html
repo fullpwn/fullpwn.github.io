@@ -1,4 +1,4 @@
-<!DOCTYPE html> <html> <head> <meta charset=UTF-8> <meta name="apple-mobile-web-app-capable" content="yes"> <link rel="apple-touch-icon" href="/gps.webp" /> <meta name="apple-mobile-web-app-status-bar-style" content="black" /> <meta name="apple-mobile-web-app-title" content="Find Me" /> <meta name=viewport content="width=device-width,initial-scale=1"> <meta name=author content="Aurelio De Rosa"> <title>Find Me</title> <style>*
+<!DOCTYPE html> <html> <head> <meta charset=UTF-8> <meta name="apple-mobile-web-app-capable" content="yes"> <link rel="apple-touch-icon" href="/gps.webp" /> <meta name="apple-mobile-web-app-title" content="Find Me" /> <meta name=viewport content="width=device-width,initial-scale=1"> <title>Find Me</title> <style>*
    {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
@@ -55,6 +55,9 @@
      background-color: #18181b;
      color: white;
    }
+   svg path {
+      fill:white
+   }
 }
 
    #log
@@ -70,7 +73,8 @@
    {
       display: block;
       margin-top: 1em;
-   }</style> 
+   }
+   </style> 
    </head> 
    <body> 
    <span id=g-unsupported class="api-support hidden">API not supported</span> 
