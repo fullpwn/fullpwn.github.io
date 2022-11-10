@@ -1,85 +1,83 @@
-<!DOCTYPE html>
-<html lang="en" manifest="cache.appcache">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="apple-mobile-web-app-title" content="ambient.">
-<meta name="apple-mobile-web-app-capable" content="yes">
-    <title>ambient.</title>
-    <script src="inobounce.js"></script>
-    <style>
-body {
-    background: #000;
-    text-align: center;
-    color: #808080;
-    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
-        position: absolute;
-    top: 50%;
-    left: 50%;
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    font-size: 175%;
-}
-body::-webkit-scrollbar {
-    display: none;
-  }
-  html {
-    scrollbar-width: none;
-    cursor:none;
-    pointer-events:none;
-  }
-  .clock {
-    -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-       -khtml-user-select: none; /* Konqueror HTML */
-         -moz-user-select: none; /* Old versions of Firefox */
-          -ms-user-select: none; /* Internet Explorer/Edge */
-              user-select: none; /* Non-prefixed version, currently
-                                    supported by Chrome, Edge, Opera and Firefox */
-
-}
-  
-    </style>
-</head>
-<body onload=dmytime();>
-    <div class="container">
-        <h1><span id='time' class="clock">00:00</span></h1>
-        <h3><span id='dmy' class="clock">1/1/1970</span></h3>
-    </div>
-    <script>
-function clock(){
-        var refresh=1000; // Refresh rate in milli seconds
-        mytime=setTimeout('display_clock()',refresh)
-        }
-        
-        function display_clock() {
-        var x = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-        document.getElementById('time').innerHTML = x;
-        clock();
-         }
-         function dmy(){
-        var refresh=1000; // Refresh rate in milli seconds
-        mytime=setTimeout('display_date()',refresh)
-        }
-
-         function display_date(){
-            var d = new Date();
-     
-             var date = d.getDate();
-            var month = d.getMonth() + 1;
-            var year = d.getFullYear();
-      
-            var dateStr = date + "/" + month + "/" + year;
-            document.getElementById('dmy').innerHTML = dateStr;
-            dmy();
-         }
-         function dmytime(){
-            display_date();
-            display_clock();
-         }
-
-    </script>
+<body onload="startTime()">
+    <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid slice">
+      <defs>
+        <radialGradient id="Gradient1" cx="50%" cy="50%" fx="10%" fy="50%" r=".5">
+          <animate attributeName="fx" dur="34s" values="0%;3%;0%" repeatCount="indefinite" />
+          <stop offset="0%" stop-color="#ff0" />
+          <stop offset="100%" stop-color="#ff00" />
+        </radialGradient>
+        <radialGradient id="Gradient2" cx="50%" cy="50%" fx="10%" fy="50%" r=".5">
+          <animate attributeName="fx" dur="23.5s" values="0%;3%;0%" repeatCount="indefinite" />
+          <stop offset="0%" stop-color="#0ff" />
+          <stop offset="100%" stop-color="#0ff0" />
+        </radialGradient>
+        <radialGradient id="Gradient3" cx="50%" cy="50%" fx="50%" fy="50%" r=".5">
+          <animate attributeName="fx" dur="21.5s" values="0%;3%;0%" repeatCount="indefinite" />
+          <stop offset="0%" stop-color="#f0f" />
+          <stop offset="100%" stop-color="#f0f0" />
+        </radialGradient>
+      </defs>
+      <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient1)">
+        <animate attributeName="x" dur="20s" values="25%;0%;25%" repeatCount="indefinite" />
+        <animate attributeName="y" dur="21s" values="0%;25%;0%" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="17s" repeatCount="indefinite" />
+      </rect>
+      <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient2)">
+        <animate attributeName="x" dur="23s" values="-25%;0%;-25%" repeatCount="indefinite" />
+        <animate attributeName="y" dur="24s" values="0%;50%;0%" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="18s" repeatCount="indefinite" />
+      </rect>
+      <rect x="0" y="0" width="100%" height="100%" fill="url(#Gradient3)">
+        <animate attributeName="x" dur="25s" values="0%;25%;0%" repeatCount="indefinite" />
+        <animate attributeName="y" dur="26s" values="0%;25%;0%" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="360 50 50" to="0 50 50" dur="19s" repeatCount="indefinite" />
+      </rect>
+    </svg>
+    <h1 id="txt"></h1>
 </body>
-</html>
+<script>
+    function startTime() {
+  const today = new Date();
+  let h = today.getHours();
+  let m = today.getMinutes();
+  m = checkTime(m);
+  document.getElementById('txt').innerHTML =  h + ":" + m;
+  setTimeout(startTime, 1000);
+}
+
+function checkTime(i) {
+  if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+  return i;
+}
+</script>
+<style>
+    @import url("https://fonts.googleapis.com/css?family=Libre+Franklin:400,700&subset=latin");
+
+body {
+    min-height: 100vh;
+  display: grid;
+  grid:
+    "main" 100vh
+    / auto;
+  place-items: center;
+  margin: 0;
+}
+
+h1 {
+  grid-area: main;
+  
+  font: 10vmin/0.8 "Libre Franklin";
+  font-weight: 700;
+  letter-spacing: -0.05em;
+  color: #fff4;
+  text-shadow: 0 0 5px #fff;
+  mix-blend-mode: overlay;
+}
+
+svg {
+  grid-area: main;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+</style>
